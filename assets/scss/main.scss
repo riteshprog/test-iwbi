@@ -1,0 +1,51 @@
+body {
+  background-color: #e8ecef;
+  height: 100vh;
+}
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite !important;
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
+.pin-center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+// citions modal css start here
+#citationsModal a {
+  word-break: break-all;
+  color: rgb(64, 148, 176);
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+.has-tooltip:hover .tooltip {
+  display: flex;
+  z-index: 50;
+}

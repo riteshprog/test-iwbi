@@ -1,0 +1,42 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://use.typekit.net/wew7csr.css');
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]:after {
+  content: attr(data-title);
+  visibility: hidden;
+  font-size: 12px;
+  width: 9rem;
+  border-radius: 8px;
+  background-color: rgba(102, 102, 102, 1);
+  color: #fff;
+  border-radius: 6px;
+  line-height: 1.2;
+  padding: 10px;
+  position: absolute;
+  z-index: 99999;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+[data-title] {
+  position: relative;
+}
+.glossary-term {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+body *:focus-visible {
+  outline: solid 2px #6495ED;
+  outline-offset: 5px;
+}
+body *:focus {
+  outline: solid 2px #6495ED;
+  outline-offset: 5px;
+}
